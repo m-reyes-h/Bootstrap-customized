@@ -479,7 +479,8 @@ label {
       }
     }
 
-    &:checked:active {
+    &:checked:active,
+    &:checked:focus {
       & + .custom-control-label {
         &:before {
           transform: none;
