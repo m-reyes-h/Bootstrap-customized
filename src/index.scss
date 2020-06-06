@@ -1,0 +1,577 @@
+:root {
+  /* Body */
+  --body-line-height: 1.4;
+
+  --color-primary-darker: hsl(220, 90%, 42%);
+  --color-primary-darker-h: 220;
+  --color-primary-darker-s: 90%;
+  --color-primary-darker-l: 42%;
+  --color-primary-dark: hsl(220, 90%, 49%);
+  --color-primary-dark-h: 220;
+  --color-primary-dark-s: 90%;
+  --color-primary-dark-l: 49%;
+  --color-primary: hsl(220, 90%, 56%);
+  --color-primary-h: 220;
+  --color-primary-s: 90%;
+  --color-primary-l: 56%;
+  --color-primary-light: hsl(220, 90%, 63%);
+  --color-primary-light-h: 220;
+  --color-primary-light-s: 90%;
+  --color-primary-light-l: 63%;
+  --color-primary-lighter: hsl(220, 90%, 70%);
+  --color-primary-lighter-h: 220;
+  --color-primary-lighter-s: 90%;
+  --color-primary-lighter-l: 70%;
+  --color-accent-darker: hsl(349, 75%, 36%);
+  --color-accent-darker-h: 349;
+  --color-accent-darker-s: 75%;
+  --color-accent-darker-l: 36%;
+  --color-accent-dark: hsl(349, 75%, 44%);
+  --color-accent-dark-h: 349;
+  --color-accent-dark-s: 75%;
+  --color-accent-dark-l: 44%;
+  --color-accent: hsl(349, 75%, 51%);
+  --color-accent-h: 349;
+  --color-accent-s: 75%;
+  --color-accent-l: 51%;
+  --color-accent-light: hsl(349, 75%, 59%);
+  --color-accent-light-h: 349;
+  --color-accent-light-s: 75%;
+  --color-accent-light-l: 59%;
+  --color-accent-lighter: hsl(349, 75%, 67%);
+  --color-accent-lighter-h: 349;
+  --color-accent-lighter-s: 75%;
+  --color-accent-lighter-l: 67%;
+  --color-black: hsl(240, 8%, 12%);
+  --color-black-h: 240;
+  --color-black-s: 8%;
+  --color-black-l: 12%;
+  --color-white: hsl(0, 0%, 100%);
+  --color-white-h: 0;
+  --color-white-s: 0%;
+  --color-white-l: 100%;
+  --color-success-darker: hsl(94, 48%, 42%);
+  --color-success-darker-h: 94;
+  --color-success-darker-s: 48%;
+  --color-success-darker-l: 42%;
+  --color-success-dark: hsl(94, 48%, 48%);
+  --color-success-dark-h: 94;
+  --color-success-dark-s: 48%;
+  --color-success-dark-l: 48%;
+  --color-success: hsl(94, 48%, 56%);
+  --color-success-h: 94;
+  --color-success-s: 48%;
+  --color-success-l: 56%;
+  --color-success-light: hsl(94, 48%, 65%);
+  --color-success-light-h: 94;
+  --color-success-light-s: 48%;
+  --color-success-light-l: 65%;
+  --color-success-lighter: hsl(94, 48%, 74%);
+  --color-success-lighter-h: 94;
+  --color-success-lighter-s: 48%;
+  --color-success-lighter-l: 74%;
+  --color-error-darker: hsl(349, 75%, 36%);
+  --color-error-darker-h: 349;
+  --color-error-darker-s: 75%;
+  --color-error-darker-l: 36%;
+  --color-error-dark: hsl(349, 75%, 44%);
+  --color-error-dark-h: 349;
+  --color-error-dark-s: 75%;
+  --color-error-dark-l: 44%;
+  --color-error: hsl(349, 75%, 51%);
+  --color-error-h: 349;
+  --color-error-s: 75%;
+  --color-error-l: 51%;
+  --color-error-light: hsl(349, 75%, 59%);
+  --color-error-light-h: 349;
+  --color-error-light-s: 75%;
+  --color-error-light-l: 59%;
+  --color-error-lighter: hsl(349, 75%, 67%);
+  --color-error-lighter-h: 349;
+  --color-error-lighter-s: 75%;
+  --color-error-lighter-l: 67%;
+  --color-warning-darker: hsl(46, 100%, 47%);
+  --color-warning-darker-h: 46;
+  --color-warning-darker-s: 100%;
+  --color-warning-darker-l: 47%;
+  --color-warning-dark: hsl(46, 100%, 50%);
+  --color-warning-dark-h: 46;
+  --color-warning-dark-s: 100%;
+  --color-warning-dark-l: 50%;
+  --color-warning: hsl(46, 100%, 61%);
+  --color-warning-h: 46;
+  --color-warning-s: 100%;
+  --color-warning-l: 61%;
+  --color-warning-light: hsl(46, 100%, 71%);
+  --color-warning-light-h: 46;
+  --color-warning-light-s: 100%;
+  --color-warning-light-l: 71%;
+  --color-warning-lighter: hsl(46, 100%, 80%);
+  --color-warning-lighter-h: 46;
+  --color-warning-lighter-s: 100%;
+  --color-warning-lighter-l: 80%;
+  --color-bg: hsl(0, 0%, 100%);
+  --color-bg-h: 0;
+  --color-bg-s: 0%;
+  --color-bg-l: 100%;
+  --color-contrast-lower: hsl(0, 0%, 95%);
+  --color-contrast-lower-h: 0;
+  --color-contrast-lower-s: 0%;
+  --color-contrast-lower-l: 95%;
+  --color-contrast-low: hsl(240, 1%, 83%);
+  --color-contrast-low-h: 240;
+  --color-contrast-low-s: 1%;
+  --color-contrast-low-l: 83%;
+  --color-contrast-medium: hsl(240, 1%, 48%);
+  --color-contrast-medium-h: 240;
+  --color-contrast-medium-s: 1%;
+  --color-contrast-medium-l: 48%;
+  --color-contrast-high: hsl(240, 4%, 20%);
+  --color-contrast-high-h: 240;
+  --color-contrast-high-s: 4%;
+  --color-contrast-high-l: 20%;
+  --color-contrast-higher: hsl(240, 8%, 12%);
+  --color-contrast-higher-h: 240;
+  --color-contrast-higher-s: 8%;
+  --color-contrast-higher-l: 12%;
+
+  /* Space */
+  --space-unit: 1.25em;
+  --space-xxxxs: calc(0.125 * var(--space-unit));
+  --space-xxxs: calc(0.25 * var(--space-unit));
+  --space-xxs: calc(0.375 * var(--space-unit));
+  --space-xs: calc(0.5 * var(--space-unit));
+  --space-sm: calc(0.75 * var(--space-unit));
+  --space-md: calc(1.25 * var(--space-unit));
+  --space-lg: calc(2 * var(--space-unit));
+  --space-xl: calc(3.25 * var(--space-unit));
+  --space-xxl: calc(5.25 * var(--space-unit));
+  --space-xxxl: calc(8.5 * var(--space-unit));
+  --space-xxxxl: calc(13.75 * var(--space-unit));
+  --component-padding: var(--space-md);
+
+  /* Form */
+  --form-control-padding-x: var(--space-sm);
+  --form-control-padding-y: var(--space-xs);
+  --form-control-radius: 0.25em;
+
+  /* Button */
+  --btn-font-size: 1em;
+  --btn-font-size-sm: 0.8em;
+  --btn-font-size-md: 1.2em;
+  --btn-font-size-lg: 1.4em;
+  --btn-padding-x: var(--space-md);
+  --btn-padding-y: var(--space-xs);
+
+  /* Checkbox / Radio Button */
+  --checkbox-radio-size: 1.25em;
+  --checkbox-radio-translate-y: 0.15em;
+  --checkbox-radio-gap: var(--space-xxxs);
+  --checkbox-radio-border-width: 2px;
+  --checkbox-radio-line-height: var(--body-line-height);
+  --radio-marker-size: 8px;
+  --checkbox-marker-size: 12px;
+  --checkbox-radius: 0.185em;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--color-contrast-high);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/**
+ * Text
+ */
+.text-muted {
+  color: hsla(
+    var(--color-contrast-medium-h),
+    var(--color-contrast-medium-s),
+    var(--color-contrast-medium-l),
+    var(--color-o, 1)
+  ) !important;
+}
+
+/**
+* Forms
+ */
+
+label {
+  line-height: normal;
+}
+
+.invalid-feedback {
+  color: var(--color-error);
+}
+
+.form-control {
+  background-color: var(--color-bg);
+  border: 2px solid var(--color-contrast-low);
+  transition: all 0.3s ease;
+
+  padding-top: var(--form-control-padding-y, 0.5em);
+  padding-bottom: var(--form-control-padding-y, 0.5em);
+  padding-left: var(--form-control-padding-x, 0.75em);
+  padding-right: var(--form-control-padding-x, 0.75em);
+  border-radius: var(--form-control-radius, 0.25em);
+  height: auto;
+  line-height: 1.55;
+
+  &:hover {
+    border-color: hsl(
+      var(--color-contrast-low-h),
+      var(--color-contrast-low-s),
+      calc(var(--color-contrast-low-l) * 0.85)
+    );
+  }
+
+  &:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0px 0px 0px 2px
+      hsla(
+        var(--color-primary-h),
+        var(--color-primary-s),
+        var(--color-primary-l),
+        0.2
+      );
+    outline: none;
+  }
+
+  &.is-invalid {
+    border-color: var(--color-error);
+    background: none;
+
+    &:hover {
+      border-color: var(--color-error);
+    }
+
+    &:focus {
+      box-shadow: 0px 0px 0px 2px
+        hsla(
+          var(--color-error-h),
+          var(--color-error-s),
+          var(--color-error-l),
+          0.2
+        );
+    }
+
+    & ~ label {
+      color: var(--color-error);
+    }
+  }
+}
+
+.form-group {
+  position: relative;
+
+  &.form-group--floating {
+    label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      margin-bottom: 0;
+      pointer-events: none;
+      cursor: text;
+      transition: all 0.3s ease;
+      line-height: 1.5;
+      padding: var(--form-control-padding-y, 0.5em)
+        var(--form-control-padding-x, 0.75em);
+
+      span {
+        padding: 0 var(--space-xxs);
+        background-color: var(--color-bg);
+      }
+    }
+
+    .form-control:not(:placeholder-shown),
+    .form-control:focus {
+      & ~ label {
+        padding-top: var(--space-xxxs);
+        padding-bottom: var(--space-xxxs);
+        font-size: 12px;
+        letter-spacing: 0.52px;
+        top: calc(-0.75 * var(--space-md));
+      }
+    }
+
+    .form-control:not(.is-invalid):focus {
+      & ~ label {
+        color: var(--color-primary);
+      }
+    }
+  }
+}
+
+/* Hide placeholder on floating label */
+.form-group--floating input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form-group--floating input:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-group--floating input::-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-group--floating input::-moz-placeholder {
+  color: transparent;
+}
+
+.form-group--floating input:-moz-placeholder {
+  color: transparent;
+}
+
+.form-group--floating input::placeholder {
+  color: transparent;
+}
+
+/**
+ * Buttons
+ */
+.btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  line-height: 1.5;
+  font-size: var(--btn-font-size, 1em);
+  letter-spacing: 0.52px;
+  padding-top: var(--btn-padding-y, 0.5em);
+  padding-bottom: var(--btn-padding-y, 0.5em);
+  padding-left: var(--btn-padding-x, 0.75em);
+  padding-right: var(--btn-padding-x, 0.75em);
+  border-radius: var(--btn-radius, 0.25em);
+  box-shadow: 0px 2px 8px
+      hsla(
+        var(--color-black-h),
+        var(--color-black-s),
+        var(--color-black-l),
+        0.12
+      ),
+    0px 1px 1px
+      hsla(
+        var(--color-black-h),
+        var(--color-black-s),
+        var(--color-black-l),
+        0.12
+      );
+  transition: all 0.3s ease;
+
+  /* Size */
+  &.btn-sm {
+    font-size: var(--btn-font-size-sm, 0.8em);
+  }
+
+  &.btn-md {
+    font-size: var(--btn-font-size-md, 1.2em);
+  }
+
+  &.btn-lg {
+    font-size: var(--btn-font-size-lg, 1.4em);
+  }
+
+  /* Link */
+  &.btn-link {
+    box-shadow: none;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+      background-color: hsla(
+        var(--color-primary-h),
+        var(--color-primary-s),
+        var(--color-primary-l),
+        0.08
+      );
+    }
+  }
+
+  /* Primary */
+  &.btn-primary {
+    background-color: var(--color-primary);
+
+    &:hover {
+      background-color: var(--color-primary-dark);
+    }
+
+    &:focus {
+      box-shadow: 0px 0px 0px 2px
+        hsla(
+          var(--color-primary-h),
+          var(--color-primary-s),
+          var(--color-primary-l),
+          0.25
+        ) !important;
+    }
+
+    &:active {
+      transform: translateY(2px);
+    }
+  }
+
+  /* Icon inside btn */
+  svg {
+    margin-right: var(--space-xxs);
+  }
+}
+
+/**
+ * Checkbox / Radiobutton
+ */
+.custom-control {
+  padding-left: 0;
+  padding-right: var(--space-xxxxs);
+
+  &.custom-control-inline {
+    margin-right: var(--space-sm);
+  }
+
+  /* Input */
+  .custom-control-input {
+    &:active {
+      & + .custom-control-label {
+        &:before {
+          transform: scale(0.8);
+        }
+      }
+    }
+
+    &:focus,
+    &:active {
+      & + .custom-control-label {
+        &:before {
+          border-color: var(--color-primary);
+          box-shadow: 0 0 0 3px
+            hsla(
+              var(--color-primary-h),
+              var(--color-primary-s),
+              var(--color-primary-l),
+              0.2
+            );
+        }
+      }
+    }
+
+    /* Checkbox */
+    &:checked {
+      & + .custom-control-label {
+        &:before {
+          background-image: url(data:image/svg+xml;charset=utf8;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAxNiAxNic+PGcgY2xhc3M9J25jLWljb24td3JhcHBlcicgc3Ryb2tlLXdpZHRoPScyJyBmaWxsPScjZmZmZmZmJyBzdHJva2U9JyNmZmZmZmYnPjxwb2x5bGluZSBmaWxsPSdub25lJyBzdHJva2U9JyNmZmZmZmYnIHN0cm9rZS1saW5lY2FwPSdyb3VuZCcgc3Ryb2tlLWxpbmVqb2luPSdyb3VuZCcgc3Ryb2tlLW1pdGVybGltaXQ9JzEwJyBwb2ludHM9JzEsOSA1LDEzIDE1LDMgJyBkYXRhLWNhcD0nYnV0dCc+PC9wb2x5bGluZT48L2c+PC9zdmc+);
+          background-size: var(--checkbox-marker-size);
+          background-color: var(--color-primary);
+          box-shadow: none;
+          border-color: var(--color-primary);
+        }
+      }
+    }
+
+    &:checked:active {
+      & + .custom-control-label {
+        &:before {
+          transform: none;
+          transition: none;
+          border-color: var(--color-primary);
+          box-shadow: 0 0 0 3px
+            hsla(
+              var(--color-primary-h),
+              var(--color-primary-s),
+              var(--color-primary-l),
+              0.2
+            );
+        }
+      }
+    }
+  }
+
+  /* Label */
+  .custom-control-label {
+    display: inline-flex;
+    align-items: baseline;
+    line-height: var(--checkbox-radio-line-height);
+    user-select: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+
+    &:before {
+      content: "";
+      position: relative;
+      top: 0.25rem;
+      left: auto;
+      border-radius: var(--checkbox-radius);
+      display: inline-block;
+      vertical-align: middle;
+      flex-shrink: 0;
+      width: var(--checkbox-radio-size);
+      height: var(--checkbox-radio-size);
+      background-color: var(--color-bg);
+      border-width: var(--checkbox-radio-border-width);
+      border-color: var(--color-contrast-low);
+      border-style: solid;
+      margin-right: var(--checkbox-radio-gap);
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: border 0.2s, -webkit-transform 0.2s;
+      transition: transform 0.2s, border 0.2s;
+      transition: transform 0.2s, border 0.2s, -webkit-transform 0.2s;
+    }
+
+    &:hover {
+      &:before {
+        border-color: var(--color-contrast-medium);
+      }
+    }
+  }
+
+  /* Radio */
+  &.custom-radio {
+    .custom-control-input {
+      &:checked {
+        & + .custom-control-label {
+          &:before {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' viewBox='0 0 24 24' width='24'%3E%3Cpath d='M0 0h24v24H0V0z' fill='none'/%3E%3Ccircle fill='hsl(220, 90%25, 56%25)' cx='12' cy='12' r='5'/%3E%3C/svg%3E");
+            background-size: var(--space-md);
+            background-position: 50% 50%;
+            background-color: var(--color-bg);
+            box-shadow: none;
+            border-color: var(--color-primary);
+          }
+        }
+      }
+
+      &:focus,
+      &:active {
+        & + .custom-control-label {
+          &::before {
+            box-shadow: 0 0 0 3px
+              hsla(
+                var(--color-primary-h),
+                var(--color-primary-s),
+                var(--color-primary-l),
+                0.2
+              );
+          }
+        }
+      }
+    }
+
+    .custom-control-label {
+      &:before {
+        border-radius: 50%;
+      }
+    }
+  }
+}
