@@ -1,10 +1,10 @@
 import React from "react";
-import { Form, Button, Row, Col } from "react-bootstrap";
+import { Form, Button, Row, Col, FormCheck } from "react-bootstrap";
 import { BsPersonPlusFill as PersonIcon } from "react-icons/bs";
 
 const Forms = () => {
   return (
-    <div>
+    <div className="my-5">
       <Form className="mb-5 pb-5">
         <Form.Group controlId="formBasicEmail1">
           <Form.Label>Default text</Form.Label>
@@ -14,7 +14,7 @@ const Forms = () => {
         <Form.Group controlId="formBasicEmail2">
           <Form.Label>Invalid text</Form.Label>
           <Form.Control type="text" isInvalid placeholder=" " />
-          <Form.Control.Feedback type="invalid" tooltip>
+          <Form.Control.Feedback type="invalid">
             Invalid field data
           </Form.Control.Feedback>
         </Form.Group>
@@ -48,7 +48,7 @@ const Forms = () => {
           <Form.Label>
             <span>Floating text</span>
           </Form.Label>
-          <Form.Control.Feedback type="invalid" tooltip>
+          <Form.Control.Feedback type="invalid">
             Invalid field data
           </Form.Control.Feedback>
         </Form.Group>
@@ -94,7 +94,7 @@ const Forms = () => {
 
         <br />
 
-        <Form.Check custom inline label="Customt" type={"radio"} id="rd-1" />
+        <Form.Check custom inline label="Custom" type={"radio"} id="rd-1" />
         <Form.Check
           custom
           inline
@@ -111,7 +111,52 @@ const Forms = () => {
           type={"radio"}
           id="rd-2"
         />
+        <Form.Check
+          custom
+          inline
+          label="Radio"
+          name="r1"
+          type={"radio"}
+          id="rd-5"
+        />
       </Form>
+
+      <h4 className="my-5">Choice tags / Radio box</h4>
+
+      <Form.Check
+        className="choice-tag choice-tag--small"
+        custom
+        inline
+        label="Choice Tag"
+        name="ct1"
+        type={"radio"}
+        id="ct-1"
+      />
+
+      <Form.Check
+        className="choice-tag"
+        custom
+        inline
+        label="Choice Tag"
+        name="ct1"
+        type={"radio"}
+        id="ct-2"
+      />
+
+      <div className="choice-tag choice-tag--icon custom-control custom-radio">
+        <FormCheck.Input
+          className="custom-control-input"
+          name="ct3"
+          id="ct3"
+          type="radio"
+        />
+        <FormCheck.Label className="custom-control-label" htmlFor="ct3">
+          <PersonIcon />
+          Allow us to contact you?
+        </FormCheck.Label>
+      </div>
+
+      <br />
     </div>
   );
 };
