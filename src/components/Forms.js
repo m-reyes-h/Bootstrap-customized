@@ -1,7 +1,7 @@
-import React from "react";
-import { Form, Button, Row, Col, FormCheck } from "react-bootstrap";
-import { BsPersonPlusFill as PersonIcon } from "react-icons/bs";
-import Select, {Option} from "rc-select"
+import React from "react"
+import { Form, Button, Row, Col, FormCheck } from "react-bootstrap"
+import { BsPersonPlusFill as PersonIcon } from "react-icons/bs"
+import Select, { Option } from "rc-select"
 
 const Forms = () => {
   return (
@@ -162,18 +162,28 @@ const Forms = () => {
       <h4 className="my-5">Select</h4>
 
       <div className="row">
-        <div className="col">
+        <div className="col" style={{ marginBottom: "500px" }}>
           <Form.Group>
             <Select>
               <Option value="jack">jack</Option>
               <Option value="lucy">lucy</Option>
               <Option value="yiminghe">yiminghe</Option>
+              <Option value="1">1</Option>
+              <Option value="2">2</Option>
+              <Option value="3">3</Option>
+              <Option value="4">4</Option>
+              <Option value="5">5</Option>
+              <Option value="6">6</Option>
+              <Option value="7">7</Option>
+              <Option value="9">9</Option>
+              <Option value="0">0</Option>
+              <Option value="10">10</Option>
             </Select>
           </Form.Group>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Forms;
+export default Forms
