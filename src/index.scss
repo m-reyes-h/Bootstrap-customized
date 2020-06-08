@@ -311,6 +311,69 @@ label {
       }
     }
   }
+
+  /* RC-Select */
+  .rc-select-single:not(.rc-select-customize-input) {
+    &.rc-select-focused {
+      .rc-select-selector {
+        border-color: var(--color-primary) !important;
+        box-shadow: 0px 0px 0px 2px
+          hsla(
+            var(--color-primary-h),
+            var(--color-primary-s),
+            var(--color-primary-l),
+            0.2
+          );
+        outline: none;
+      }
+    }
+
+    .rc-select-selector {
+      border: 2px solid var(--color-contrast-low);
+      transition: all 0.3s ease;
+      padding-top: var(--form-control-padding-y, 0.5em);
+      padding-bottom: var(--form-control-padding-y, 0.5em);
+      padding-left: var(--form-control-padding-x, 0.75em);
+      padding-right: var(--space-lg, 3em);
+      border-radius: var(--form-control-radius, 0.25em);
+      height: auto;
+      line-height: 1.55;
+
+      .rc-select-selection-item,
+      .rc-select-selection-placeholder {
+        position: absolute;
+        top: var(--form-control-padding-y, 0.5em);
+        left: var(--form-control-padding-x, 0.75em);
+        pointer-events: none;
+      }
+    }
+
+    &.rc-select-show-arrow {
+      .rc-select-arrow {
+        pointer-events: none;
+        position: absolute;
+        right: var(--space-sm);
+        top: var(--form-control-padding-y, 0.5em);
+
+        .rc-select-arrow-icon {
+          &:after {
+            background-image: url("data:image/svg+xml,%3Csvg class='bi bi-chevron-down' width='20px' height='20px' viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+            background-size: var(--space-md);
+            background-position: 50% 100%;
+            background-color: var(--color-bg);
+            background-repeat: no-repeat;
+            content: "";
+            border: none;
+            width: 28px;
+            height: 28px;
+            display: inline-block;
+            border-top-color: #999;
+            transform: none;
+          }
+        }
+      }
+    }
+  }
 }
 
 /* Hide placeholder on floating label */

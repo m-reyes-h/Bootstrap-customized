@@ -1,6 +1,7 @@
 import React from "react";
 import { Form, Button, Row, Col, FormCheck } from "react-bootstrap";
 import { BsPersonPlusFill as PersonIcon } from "react-icons/bs";
+import Select, {Option} from "rc-select"
 
 const Forms = () => {
   return (
@@ -157,6 +158,20 @@ const Forms = () => {
       </div>
 
       <br />
+
+      <h4 className="my-5">Select</h4>
+
+      <div className="row">
+        <div className="col">
+          <Form.Group>
+            <Select>
+              <Option value="jack">jack</Option>
+              <Option value="lucy">lucy</Option>
+              <Option value="yiminghe">yiminghe</Option>
+            </Select>
+          </Form.Group>
+        </div>
+      </div>
     </div>
   );
 };
