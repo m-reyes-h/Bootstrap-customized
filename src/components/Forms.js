@@ -4,6 +4,7 @@ import { BsPersonPlusFill as PersonIcon } from "react-icons/bs"
 import Select, { Option } from "rc-select"
 
 const Forms = () => {
+  const [value, setValue] = React.useState("")
   return (
     <div className="my-5">
       <Form className="mb-5 pb-5">
@@ -162,7 +163,7 @@ const Forms = () => {
       <h4 className="my-5">Select</h4>
 
       <div className="row">
-        <div className="col" style={{ marginBottom: "500px" }}>
+        <div className="col">
           <Form.Group>
             <Select>
               <Option value="jack">jack</Option>
@@ -178,6 +179,38 @@ const Forms = () => {
               <Option value="9">9</Option>
               <Option value="0">0</Option>
               <Option value="10">10</Option>
+            </Select>
+          </Form.Group>
+        </div>
+        <div className="col">
+          <p>Sercheable</p>
+          <Form.Group>
+            <Select
+              optionFilterProp="desc"
+              onChange={(val, string) => {
+                setValue(val)
+              }}
+              value={value}
+              showSearch
+            >
+              <Option value="jack" desc="jack jacky pep">
+                jack
+              </Option>
+              <Option value="lucy" desc="lucy locky">
+                lucy
+              </Option>
+              <Option value="yiminghe" desc="yimingue">
+                yiminghe
+              </Option>
+              <Option value="1" desc="1 usa us">
+                1
+              </Option>
+              <Option value="2" desc="2">
+                2
+              </Option>
+              <Option value="3" desc="3">
+                3
+              </Option>
             </Select>
           </Form.Group>
         </div>
