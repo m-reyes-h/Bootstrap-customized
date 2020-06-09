@@ -135,6 +135,20 @@
   --color-contrast-higher-s: 8%;
   --color-contrast-higher-l: 12%;
 
+  /* Font */
+  --text-base-size: 1.25em;
+  --text-scale-ratio: 1.25;
+  --text-xs: calc((1em / var(--text-scale-ratio)) / var(--text-scale-ratio));
+  --text-sm: calc(var(--text-xs) * var(--text-scale-ratio));
+  --text-md: calc(
+    var(--text-sm) * var(--text-scale-ratio) * var(--text-scale-ratio)
+  );
+  --text-lg: calc(var(--text-md) * var(--text-scale-ratio));
+  --text-xl: calc(var(--text-lg) * var(--text-scale-ratio));
+  --text-xxl: calc(var(--text-xl) * var(--text-scale-ratio));
+  --text-xxxl: calc(var(--text-xxl) * var(--text-scale-ratio));
+  --text-xxxxl: calc(var(--text-xxxl) * var(--text-scale-ratio));
+
   /* Shadow / Radius / Ease */
   --radius-sm: calc(var(--radius, 0.25em) / 2);
   --radius-md: var(--radius, 0.25em);
@@ -206,6 +220,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--color-contrast-high);
+
+  /* Styles to prevent body scroll when modal is open */
+  &.scrolling-effect {
+    position: relative;
+    width: calc(100% - 17px);
+    overflow: hidden;
+  }
 }
 
 code {
@@ -223,6 +244,20 @@ code {
     var(--color-contrast-medium-l),
     var(--color-o, 1)
   ) !important;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  line-height: var(--heading-line-height, 1.2);
+}
+
+h4,
+.text-md {
+  font-size: var(--text-md, 1.2em);
 }
 
 /**
@@ -391,7 +426,6 @@ label {
             width: 28px;
             height: 28px;
             display: inline-block;
-            border-top-color: #999;
             transform: none;
           }
         }
@@ -609,6 +643,7 @@ label {
       & + .custom-control-label {
         &:before {
           background-image: url(data:image/svg+xml;charset=utf8;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAxNiAxNic+PGcgY2xhc3M9J25jLWljb24td3JhcHBlcicgc3Ryb2tlLXdpZHRoPScyJyBmaWxsPScjZmZmZmZmJyBzdHJva2U9JyNmZmZmZmYnPjxwb2x5bGluZSBmaWxsPSdub25lJyBzdHJva2U9JyNmZmZmZmYnIHN0cm9rZS1saW5lY2FwPSdyb3VuZCcgc3Ryb2tlLWxpbmVqb2luPSdyb3VuZCcgc3Ryb2tlLW1pdGVybGltaXQ9JzEwJyBwb2ludHM9JzEsOSA1LDEzIDE1LDMgJyBkYXRhLWNhcD0nYnV0dCc+PC9wb2x5bGluZT48L2c+PC9zdmc+);
+          background-repeat: no-repeat;
           background-size: var(--checkbox-marker-size);
           background-color: var(--color-primary);
           box-shadow: none;
@@ -644,6 +679,10 @@ label {
     user-select: none;
     cursor: pointer;
     font-size: 1.1rem;
+
+    &:after {
+      display: none;
+    }
 
     &:before {
       content: "";
@@ -684,6 +723,7 @@ label {
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' viewBox='0 0 24 24' width='24'%3E%3Cpath d='M0 0h24v24H0V0z' fill='none'/%3E%3Ccircle fill='hsl(220, 90%25, 56%25)' cx='12' cy='12' r='5'/%3E%3C/svg%3E");
             background-size: var(--space-md);
             background-position: 50% 50%;
+            background-repeat: no-repeat;
             background-color: var(--color-bg);
             box-shadow: none;
             border-color: var(--color-primary);
