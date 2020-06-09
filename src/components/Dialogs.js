@@ -10,7 +10,7 @@ const Footer = () => (
 )
 
 const Dialogs = () => {
-  const [visible, setVisible] = React.useState(true)
+  const [visible, setVisible] = React.useState(false)
 
   const handleOpen = () => {
     setVisible(true)
