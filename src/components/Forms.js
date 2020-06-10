@@ -188,7 +188,7 @@ const Forms = () => {
             <Select
               optionFilterProp="desc"
               onChange={(val, string) => {
-                setValue(val)
+                setValue(val);
               }}
               value={value}
               showSearch
@@ -230,8 +230,35 @@ const Forms = () => {
           </Dropdown>
         </div>
       </div>
+      <div className="row">
+        <div className="col">
+          <ul className="list-group list-group--options">
+            <li className="list-group-item">
+              <Form.Check
+                custom
+                label="Custome"
+                name="asd"
+                type={"radio"}
+                id="rd-333"
+              />
+            </li>
+            <li className="list-group-item">
+              <Form.Check
+                custom
+                label="Custome"
+                name="asd"
+                type={"radio"}
+                id="rd-3333"
+              />
+            </li>
+            <li className="list-group-item">Morbi leo risus</li>
+            <li className="list-group-item">Porta ac consectetur ac</li>
+            <li className="list-group-item">Vestibulum at eros</li>
+          </ul>
+        </div>
+      </div>
     </div>
-  )
+  );
 }
 
 export default Forms
