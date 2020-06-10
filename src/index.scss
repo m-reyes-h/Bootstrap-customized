@@ -557,6 +557,7 @@ label {
 
   /* Link */
   &.btn-link {
+    color: var(--color-primary);
     box-shadow: none;
     background-color: transparent;
 
@@ -568,8 +569,20 @@ label {
         var(--color-primary-l),
         0.08
       );
+      text-decoration: none;
+    }
+    
+    &.btn-text {
+      color: var(--color-black);
+      
+      &:hover,
+      &:focus {
+        background-color: var(--color-contrast-lower);
+      }
     }
   }
+  
+  
 
   /* Primary */
   &.btn-primary {

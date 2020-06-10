@@ -88,6 +88,13 @@ const Forms = () => {
             </Button>
           </Col>
         </Row>
+        <Row>
+          <Col>
+            <Button variant="link" className="btn-text" type="button">
+              Text
+            </Button>
+          </Col>
+        </Row>
 
         <h4 className="my-5">Checkbox / Radio</h4>
 
