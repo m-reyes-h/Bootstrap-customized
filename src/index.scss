@@ -954,6 +954,13 @@ label {
             );
           }
         }
+        
+        &,medium {
+          .custom-control-label {
+            padding-top: calc(var(--space-sm, 0.5em) + 0.055em);
+            padding-bottom: calc(var(--space-sm, 0.5em) + 0.055em);
+          }
+        }
       }
       
       .custom-control-input {

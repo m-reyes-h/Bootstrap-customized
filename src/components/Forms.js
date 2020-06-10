@@ -235,8 +235,9 @@ const Forms = () => {
           <ul className="list-group list-group--options">
             <li className="list-group-item">
               <Form.Check
+                className="medium"
                 custom
-                label="Custome"
+                label="Medium size"
                 name="asd"
                 type={"radio"}
                 id="rd-333"
