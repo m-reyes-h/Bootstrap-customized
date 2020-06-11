@@ -56,8 +56,8 @@ function AccordionCard() {
               </Accordion.Collapse>
               <Card.Footer>
                 <div className="ml-auto">
-                  <Button variant="primary">Create new</Button>
-                  <Button variant="primary">Search</Button>
+                  <Button variant="link">Create new</Button>
+                  <Button variant="outline-primary">Search</Button>
                 </div>
               </Card.Footer>
             </Card>
