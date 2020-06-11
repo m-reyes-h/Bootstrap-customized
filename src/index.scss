@@ -246,18 +246,59 @@ code {
   ) !important;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  font-family: var(--font-primary);
+.h1,
+.h2,
+.h3,
+.h4 {
   font-weight: 700;
   line-height: var(--heading-line-height, 1.2);
 }
 
-h4,
+.h4,
 .text-md {
   font-size: var(--text-md, 1.2em);
+}
+
+.h5 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.334;
+  letter-spacing: 0em;
+}
+
+.h6 {
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  letter-spacing: 0.0075em;
+}
+
+.subtitle1 {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.75;
+  letter-spacing: 0.00938em;
+}
+
+.subtitle2 {
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.57;
+  letter-spacing: 0.00714em;
+}
+
+.body1 {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.00938em;
+}
+
+.body2 {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
 }
 
 /**
@@ -560,6 +601,7 @@ label {
     color: var(--color-primary);
     box-shadow: none;
     background-color: transparent;
+    font-weight: 500;
 
     &:hover,
     &:focus {
@@ -572,6 +614,7 @@ label {
       text-decoration: none;
     }
     
+    /* Text */
     &.btn-text {
       color: var(--color-black);
       
@@ -579,14 +622,30 @@ label {
       &:focus {
         background-color: var(--color-contrast-lower);
       }
+      
     }
   }
   
+  /* Active */
+  &:active {
+    transform: translateY(2px);
+  }
+  
+  /* Outline */
+  &[class*="btn-outline"] {
+    border-width: 2px;
+    font-weight: 500;
+    box-shadow: none;
+  }
   
 
   /* Primary */
-  &.btn-primary {
-    background-color: var(--color-primary);
+  &.btn-primary,
+  &.btn-outline-primary {
+    
+    &:not(.btn-outline-primary) {
+      background-color: var(--color-primary);      
+    }
 
     &:hover {
       background-color: var(--color-primary-dark);
@@ -601,15 +660,15 @@ label {
           0.25
         ) !important;
     }
-
-    &:active {
-      transform: translateY(2px);
-    }
   }
 
   /* Icon inside btn */
   svg {
     margin-right: var(--space-xxs);
+  }
+  
+  & + .btn {
+    margin-left: var(--space-sm);
   }
 }
 
@@ -997,5 +1056,92 @@ label {
         }
       }
     }
+  }
+}
+
+/**
+ * Accordion
+ */
+.accordion {
+  .card {
+    box-shadow: var(--shadow-sm);
+    background-color: hsla(var(--color-bg-h),var(--color-bg-s),var(--color-bg-l),var(--bg-o));
+    border-radius: var(--radius-md);
+    border: 1px solid hsla(
+              var(--color-contrast-low-h),
+              var(--color-contrast-low-s),
+              var(--color-contrast-low-l),
+              0.50
+            );
+    
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: var(--space-sm);
+      padding-bottom: var(--space-sm);
+      padding-left: 1.25em !important;
+      padding-right: 1.25em !important;
+      background-color: var(--color-bg);
+      border-color: transparent;
+      color: var(--color-black);
+      
+      /* As button header for keyboard navigation */
+      &.card-header--toggle {
+        cursor: pointer;
+        box-shadow: none !important;
+        
+        &:focus,
+        &:active {
+          background-color: var(--color-bg);
+          color: var(--color-black);
+          border-color: transparent;
+          transform: translateY(0);
+        }
+        
+        &:focus {
+          background-color: hsla(
+              var(--color-contrast-lower-h),
+              var(--color-contrast-lower-s),
+              var(--color-contrast-lower-l),
+              0.70
+            );
+        }
+      }
+      
+      .btn:not(.card-header--toggle) {
+        padding-left: var(--space-xs);
+        padding-right: var(--space-xs);
+        font-weight: 500;
+        font-size: 0.77rem;
+        letter-spacing: 0.02857em;
+        text-transform: uppercase;
+        
+        svg {
+          margin-left: var(--space-xs);
+        }
+      }
+    }
+    
+    .card-footer {
+      background-color: var(--color-bg);
+      border-color: transparent;
+      display: flex;
+      align-items: center;
+      
+      &:last-child {
+        border-radius: var(--radius-md);
+      }
+    }
+    
+    .card-title {
+      margin-bottom: 0;
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.5;
+      letter-spacing: 0.00938em;      
+    }
+    
+    
   }
 }

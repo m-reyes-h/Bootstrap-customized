@@ -96,6 +96,14 @@ const Forms = () => {
           </Col>
         </Row>
 
+        <hr />
+
+        <Row>
+          <Col>
+            <Button variant="outline-primary">Outline</Button>
+          </Col>
+        </Row>
+
         <h4 className="my-5">Checkbox / Radio</h4>
 
         <Form.Check custom label="Custome" type={"checkbox"} id="chk-1" />
