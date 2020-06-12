@@ -1073,15 +1073,20 @@ label {
  */
 .accordion {
   .card {
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0;
     background-color: hsla(var(--color-bg-h),var(--color-bg-s),var(--color-bg-l),var(--bg-o));
     border-radius: var(--radius-md);
+    transition: all 0.3s ease;
     border: 1px solid hsla(
       var(--color-contrast-low-h),
       var(--color-contrast-low-s),
       var(--color-contrast-low-l),
       0.50
     );
+    
+    &:hover {
+      box-shadow: var(--shadow-sm);
+    }
     
     .card-header {
       display: flex;
@@ -1185,8 +1190,11 @@ label {
         color: var(--color-contrast-high);
        }
        
-       &:active {
+       &:active,
+       &:focus {
          outline: none;
+         border-color: transparent;
+         background-color: var(--color-contrast-lower);
        }
        
        &.active {
@@ -1197,6 +1205,10 @@ label {
        &.disabled {
          color: var(--color-contrast-low);
          cursor: none;
+       }
+       
+       svg {
+         margin-right: var(--space-sm);
        }
     }
   }
