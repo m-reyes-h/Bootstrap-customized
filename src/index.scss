@@ -1163,23 +1163,24 @@ label {
  * Tabs
  */
 .nav-tabs {
-  border-bottom: 1px solid var(--color-contrast-low);
+  border-bottom: 1px solid transparent;
   
   .nav-item {
+    transition: all 0.2s ease;
+    
      &.nav-link {
        text-transform: uppercase;
        border-bottom-width: 2px;
        color: var(--color-contrast-medium);
-       padding: var(--space-sm) var(--space-md);
+       padding: var(--space-xxxs) var(--space-md);
        font-size: .95em;
+       letter-spacing: .0892857143em;
+       line-height: 2.25rem;
+       font-size: .875rem;
+       font-weight: 500;  
        
        &:hover {
-        background-color: hsla(
-          var(--color-primary-h),
-          var(--color-primary-s),
-          var(--color-primary-l),
-          0.08
-        );
+        background-color: var(--color-contrast-lower);
         border-color: transparent;
         color: var(--color-contrast-high);
        }
@@ -1191,7 +1192,6 @@ label {
        &.active {
          border-color: transparent transparent var(--color-primary);
          color: var(--color-contrast-higher);
-         font-weight: 500;
        }
        
        &.disabled {
@@ -1201,4 +1201,18 @@ label {
     }
   }
   
+  &.primary {
+    .nav-item {    
+      &.nav-link {
+        &.active {
+          border-color: transparent transparent var(--color-primary);
+          color: var(--color-primary);
+        }
+      }
+    }
+  }  
+}
+
+.tab-content {
+  padding-top: var(--space-sm);
 }
