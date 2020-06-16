@@ -13,6 +13,11 @@ const Forms = () => {
           <Form.Control type="text" placeholder=" " />
         </Form.Group>
 
+        <Form.Group controlId="formBasicEmail1">
+          <Form.Label>Default text</Form.Label>
+          <Form.Control type="text" size="sm" placeholder=" " />
+        </Form.Group>
+
         <Form.Group controlId="formBasicEmail2">
           <Form.Label>Invalid text</Form.Label>
           <Form.Control type="text" isInvalid placeholder=" " />

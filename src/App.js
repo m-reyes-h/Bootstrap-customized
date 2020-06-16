@@ -3,6 +3,7 @@ import Forms from "./components/Forms"
 import Dialogs from "./components/Dialogs"
 import AccordionCard from "./components/AccordionCard";
 import Tabular from "./components/Tabular";
+import Cards from './components/Cards';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Forms />
       <Tabular />
       <AccordionCard />
+      <Cards />
       <Dialogs />
     </div>
   )
