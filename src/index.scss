@@ -265,6 +265,10 @@ code {
   ) !important;
 }
 
+.text-secondary {
+  color: var(--color-contrast-high);
+}
+
 .text-md {
   font-size: var(--text-md);
 }
@@ -379,7 +383,8 @@ label {
   color: var(--color-error);
 }
 
-.form-control {
+.form-control,
+.rc-picker-input input {
   background-color: var(--color-bg);
   border: 2px solid var(--color-contrast-low);
   transition: all 0.3s ease;
@@ -557,6 +562,7 @@ label {
   background: var(--color-bg);
   transition: visibility 0s, opacity 0.2s;
   padding: var(--space-xxs) 0;
+  z-index: 1040;
 
   .rc-select-item {
     cursor: pointer;
@@ -759,19 +765,13 @@ label {
 
   /* Input */
   .custom-control-input {
-    &:active {
-      & + .custom-control-label {
-        &:before {
-          transform: scale(0.8);
-        }
-      }
-    }
+        
 
-    &:focus,
-    &:active {
+    &:focus {
       & + .custom-control-label {
         &:before {
-          border-color: var(--color-primary);
+          border-color: var(--color-contrast-low);
+          background-color: transparent;
           box-shadow: 0 0 0 3px
             hsla(
               var(--color-primary-h),
@@ -779,6 +779,16 @@ label {
               var(--color-primary-l),
               0.2
             );
+        }
+      }
+    }
+    
+    &:active {
+      & + .custom-control-label {
+        &:before {
+          background-color: transparent;
+          box-shadow: none;
+          border-color: var(--color-contrast-low);
         }
       }
     }
@@ -875,9 +885,8 @@ label {
           }
         }
       }
-
-      &:focus,
-      &:active {
+            
+      &:focus {
         & + .custom-control-label {
           &::before {
             box-shadow: 0 0 0 3px
@@ -1005,7 +1014,7 @@ label {
         }
       }
 
-      &:active,
+      // &:active,
       &:focus {
         & + .custom-control-label {
           background-color: hsla(
@@ -1300,4 +1309,25 @@ label {
 
 .tab-content {
   padding-top: var(--space-sm);
+}
+
+/**
+ * Table
+ */
+.table {
+  td,
+  th {
+    vertical-align: inherit;
+  }
+  
+  &.table-hover {
+    tbody {
+      tr {
+        transition: all 0.1s ease;
+        &:hover {
+          background-color: var(--color-contrast-lower);
+        }
+      }
+    }
+  }
 }
