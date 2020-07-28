@@ -183,7 +183,9 @@ const Forms = () => {
 
         </div>
 
-        <div className="my-5 py-5">
+      {/* ------------------------------------------------------------------- */}
+
+      <div className="my-5 py-5">
           <h1>Checkbox & Radio buttons</h1>
           <hr/>
           
@@ -218,60 +220,281 @@ const Forms = () => {
           />
       </div>
 
+
+      <div className="my-5 py-5">
+        <h1>Choice tags</h1>
+        <hr/>
+
+        <Row>
+          <Col>
+            <Form.Check
+              className="choice-tag choice-tag--small outlined"
+              custom
+              inline
+              label="Default color outlined"
+              name="ccl-1"
+              type={"radio"}
+              id="ccl-1"
+            />
+
+            <Form.Check
+              className="choice-tag choice-tag--small outlined"
+              custom
+              inline
+              label="Default color outlined"
+              name="ccl-1"
+              type={"radio"}
+              id="ccl-12"
+            />
+          </Col>
+        </Row>
+        
+
+        <Row>
+          <Col>
+            <Form.Check
+              className="choice-tag primary outlined pill"
+              custom
+              inline
+              label="Primary outlined"
+              name="ct1"
+              type={"radio"}
+              id="ct-1"
+            />
+
+            <Form.Check
+              className="choice-tag primary outlined pill"
+              custom
+              inline
+              label="Primary outlined"
+              name="ct1"
+              type={"radio"}
+              id="ct-2"
+            />
+          </Col>
+
+          <Col>
+            <Form.Check
+              className="choice-tag primary pill"
+              custom
+              inline
+              label="Primary plain"
+              name="ctpp"
+              type={"radio"}
+              id="ct-1pp"
+            />
+
+            <Form.Check
+              className="choice-tag primary pill"
+              custom
+              inline
+              label="Primary plain"
+              name="ctpp"
+              type={"radio"}
+              id="ct-2pp"
+            />
+          </Col>
+        </Row>
+
+        <Row className="my-5">
+         
+            <Col xs="12">
+              <Form.Check
+                className="choice-tag choice-tag-check outlined inline"
+                custom
+                label="Choice Tag Outlined"
+                name="ct52"
+                type={"radio"}
+                id="ct-52"
+              />
+
+              <Form.Check
+                className="choice-tag choice-tag-check outlined inline"
+                custom
+                label="Choice Tag Outlined"
+                name="ct52"
+                type={"radio"}
+                id="ct-58"
+              />
+            </Col>
+         
+
+          
+            <Col>
+              <Form.Check
+                className="choice-tag choice-tag-check outlined pill inline"
+                custom
+                label="Choice Tag Outlined"
+                name="ct5233"
+                type={"radio"}
+                id="ct-52123"
+              />
+
+              <Form.Check
+                className="choice-tag choice-tag-check outlined pill inline"
+                custom
+                label="Choice Tag Outlined"
+                name="ct5233"
+                type={"radio"}
+                id="ct-58123"
+              />
+            </Col>
+          
+
+
+          <Col>
+            <Form.Check
+              className="choice-tag choice-tag-check primary"
+              custom
+              label="Choice  Primary"
+              name="ct5244"
+              type={"radio"}
+              id="ct-52cp"
+            />
+
+            <Form.Check
+              className="choice-tag choice-tag-check primary"
+              custom
+              label="Choice Primary"
+              name="ct5244"
+              type={"radio"}
+              id="ct-58cp"
+            />
+
+            <Form.Check
+              className="choice-tag choice-tag-check outlined primary blue"
+              custom
+              label="Outline Primary"
+              name="ct5244"
+              type={"radio"}
+              id="ct-59cp"
+            />
+
+            <Form.Check
+              className="choice-tag choice-tag-check outlined primary blue"
+              custom
+              label="Outline Primary"
+              name="ct5244"
+              type={"radio"}
+              id="ct-60cp"
+            />
+
+            <Form.Check
+              className="choice-tag choice-tag-check outlined primary blue pill"
+              custom
+              label="Outline Pill"
+              name="ct5244"
+              type={"radio"}
+              id="ct-60qcp"
+            />
+          </Col>
+        </Row>
+
+        <Row>
+          <Col>
+            <div className="choice-tag choice-tag--icon custom-control outlined custom-radio inline">
+              <FormCheck.Input
+                className="custom-control-input"
+                name="ct009"
+                id="csd334"
+                type="radio"
+              />
+              <FormCheck.Label className="custom-control-label" htmlFor="csd334">
+                <PersonIcon />
+                Allow us to <br/>contact you?
+              </FormCheck.Label>
+            </div>
+
+            <div className="choice-tag choice-tag--icon custom-control outlined custom-radio inline">
+              <FormCheck.Input
+                className="custom-control-input"
+                name="ct009"
+                id="csd335"
+                type="radio"
+              />
+              <FormCheck.Label className="custom-control-label" htmlFor="csd335">
+                <PersonIcon />
+                Allow us to contact you?
+              </FormCheck.Label>
+            </div>
+
+            <div className="choice-tag choice-tag--icon custom-control custom-radio outlined primary inline">
+              <FormCheck.Input
+                className="custom-control-input"
+                name="ct009"
+                id="csd336"
+                type="radio"
+              />
+              <FormCheck.Label className="custom-control-label" htmlFor="csd336">
+                <PersonIcon />
+                Cash pickup?
+              </FormCheck.Label>
+            </div>
+
+            <div className="choice-tag choice-tag--icon custom-control custom-radio primary inline">
+              <FormCheck.Input
+                className="custom-control-input"
+                name="ct009"
+                id="csd338"
+                type="radio"
+              />
+              <FormCheck.Label className="custom-control-label" htmlFor="csd338">
+                <PersonIcon />
+                Bank deposit?
+              </FormCheck.Label>
+            </div>
+          </Col>
+        </Row>
+        
+        <div className="my-5 py-5">
+          <h1>Select</h1>
+          <hr/>
+
+          <Row>
+            <Col>
+              <Form.Group>
+                <Select 
+                  allowClear
+                  placeholder="" 
+                  id="select1"
+                >
+                  
+                  <Option value="jack">jack</Option>
+                  <Option value="lucy">lucy</Option>
+                  <Option value="yiminghe">yiminghe</Option>
+                  <Option value="1">1</Option>
+                  <Option value="2">2</Option>
+                  <Option value="3">3</Option>
+                  <Option value="4">4</Option>
+                  <Option value="5">5</Option>
+                  <Option value="6">6</Option>
+                  <Option value="7">7</Option>
+                  <Option value="9">9</Option>
+                  <Option value="0">0</Option>
+                  <Option value="10">10</Option>
+                </Select>
+                <label htmlFor="select1">Select box auto clear</label>
+              </Form.Group>
+            </Col>
+          </Row>
+
+        </div>
+        
+
+        
+
+        
+
+        
+
     </div>
 
-      <h4 className="my-5">Choice tags / Radio box</h4>
+    
 
-      <Form.Check
-        className="choice-tag choice-tag--small"
-        custom
-        inline
-        label="Choice Tag"
-        name="ct1"
-        type={"radio"}
-        id="ct-1"
-      />
+    </div>
+        
 
-      <Form.Check
-        className="choice-tag"
-        custom
-        inline
-        label="Choice Tag"
-        name="ct1"
-        type={"radio"}
-        id="ct-2"
-      />
-
-      <Form.Check
-        className="choice-tag choice-tag-check"
-        custom
-        label="Choice Tag"
-        name="ct52"
-        type={"radio"}
-        id="ct-52"
-      />
-
-      <Form.Check
-        className="choice-tag choice-tag-check"
-        custom
-        label="Choice Tag"
-        name="ct52"
-        type={"radio"}
-        id="ct-58"
-      />
-
-      <div className="choice-tag choice-tag--icon custom-control custom-radio">
-        <FormCheck.Input
-          className="custom-control-input"
-          name="ct3"
-          id="ct3"
-          type="radio"
-        />
-        <FormCheck.Label className="custom-control-label" htmlFor="ct3">
-          <PersonIcon />
-          Allow us to contact you?
-        </FormCheck.Label>
-      </div>
+      
 
       <br />
 
