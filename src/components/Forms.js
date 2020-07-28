@@ -6,25 +6,78 @@ import Select, { Option } from "rc-select"
 const Forms = () => {
   const [value, setValue] = React.useState("")
   return (
-    <div className="my-5">
-      <Form className="mb-5 pb-5">
-        <Form.Group controlId="formBasicEmail1">
-          <Form.Label>Default text</Form.Label>
-          <Form.Control type="text" placeholder=" " />
-        </Form.Group>
+    <div className="my-5 bg-white border p-5">
 
-        <Form.Group controlId="formBasicEmail1">
-          <Form.Label>Default text</Form.Label>
-          <Form.Control type="text" size="sm" placeholder=" " />
-        </Form.Group>
+      <div className="mv-5 py-5">
+        <h1>Text</h1>
+        <hr/>
 
-        <Form.Group controlId="formBasicEmail2">
-          <Form.Label>Invalid text</Form.Label>
-          <Form.Control type="text" isInvalid placeholder=" " />
-          <Form.Control.Feedback type="invalid">
-            Invalid field data
-          </Form.Control.Feedback>
-        </Form.Group>
+        <p className="title">Title text</p>
+        <p className="subtitle">Subtitle text</p>
+        <p className="subtitle1">Subtitle 1 text</p>
+        <p className="subtitle2">Subtitle 2 text</p>
+        <p className="body">Body text</p>
+        <p className="description">Description text</p>
+        <p className="help">Help text</p>
+        <a href="/#">Link text</a>
+      </div>
+
+      
+
+      <div className="my-5 py-5">
+        <h1>Colors</h1>
+        <hr/>
+
+        <div class="row">
+          <div class="col">
+            <p className="blue">Blue</p>
+            <p className="light-blue">Light Blue</p>
+            <p className="dark-blue">Dark Blue</p>
+          </div>
+          <div class="col">
+            <p className="green">Green</p>
+            <p className="light-green">Light Green</p>
+            <p className="red">Red</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col rounded p-4 bg-blue text-light ">background blue</div>
+          <div class="col rounded p-4 bg-light-blue dark-blue mx-3">background light blue</div>
+          <div class="col rounded p-4 bg-dark-blue text-light">background dark blue</div>
+        </div>
+        <div class="row mt-3">
+          <div class="col rounded p-4 bg-green text-light ">background green</div>
+          <div class="col rounded p-4 bg-light-green dark-green ml-3 mr-1">background light green</div>
+          <div class="col rounded p-4 bg-red text-light mr-3 ml-1">background red</div>
+          <div class="col rounded p-4 bg-white border">Border color</div>
+        </div>        
+      </div>
+
+      {/* ------------------------------------------------------------------- */}
+
+      <div className="my-5 py-5">
+        <h1>Form</h1>
+        <hr/>
+        <h5 className="my-5 pt-5">Default input</h5>
+     
+        <div class="row">
+          <div class="col">
+            <Form.Group controlId="formBasicEmail1">
+              <Form.Label>Default text</Form.Label>
+              <Form.Control type="text" placeholder=" " />
+            </Form.Group>
+          </div>
+          <div class="col">
+            <Form.Group controlId="formBasicEmail2">
+              <Form.Label>Invalid text</Form.Label>
+              <Form.Control type="text" isInvalid placeholder=" " />
+              <Form.Control.Feedback className="help" type="invalid">
+                Invalid field data
+              </Form.Control.Feedback>
+            </Form.Group>
+          </div>
+        </div>        
 
         <Form.Group controlId="exampleForm.ControlTextarea1">
           <Form.Label>Example textarea</Form.Label>
@@ -34,114 +87,138 @@ const Forms = () => {
             numbers, and must not contain spaces, special characters, or emoji.
           </Form.Text>
         </Form.Group>
+        
+        {/* ------------------------------------------------------------------- */}
 
-        <h4 className="my-5">Floatig lable</h4>
+        <h5 className="my-5 pt-5">Input Outline</h5>
 
-        <Form.Group
-          className="form-group--floating"
-          controlId="formBasicEmail3"
-        >
-          <Form.Control type="text" placeholder=" " />
-          <Form.Label>
-            <span>Floating text</span>
-          </Form.Label>
-        </Form.Group>
+        <div class="row">
+          <div class="col">
+            <Form.Group
+              className="form-group--floating"
+              controlId="formBasicEmail3"
+            >
+              <Form.Control type="text" placeholder=" " />
+              <Form.Label>
+                <span>Floating text</span>
+              </Form.Label>
+            </Form.Group>
+          </div>
 
-        <Form.Group
-          className="form-group--floating"
-          controlId="formBasicEmail4"
-        >
-          <Form.Control type="text" isInvalid placeholder=" " />
-          <Form.Label>
-            <span>Floating text</span>
-          </Form.Label>
-          <Form.Control.Feedback type="invalid">
-            Invalid field data
-          </Form.Control.Feedback>
-        </Form.Group>
+          <div class="col">
+            <Form.Group
+            className="form-group--floating"
+            controlId="formBasicEmail4"
+            >
+              <Form.Control type="text" isInvalid placeholder=" " />
+              <Form.Label>
+                <span>Floating text</span>
+              </Form.Label>
+              <Form.Control.Feedback type="invalid">
+                Invalid field data
+              </Form.Control.Feedback>
+            </Form.Group>
+          </div>
+        </div>
 
-        <Row>
-          <Col>
-            <Button variant="primary" type="submit">
-              Default
-            </Button>
-          </Col>
-          <Col>
-            <Button size="sm" variant="primary" type="submit">
-              Small
-            </Button>
-          </Col>
-          <Col>
-            <Button size="md" variant="primary" type="submit">
-              Medium
-            </Button>
-          </Col>
-          <Col>
-            <Button size="lg" variant="primary" type="submit">
-              Large
-            </Button>
-          </Col>
-          <Col>
-            <Button variant="primary" type="submit">
-              <PersonIcon />
-              Large
-            </Button>
-          </Col>
-          <Col>
-            <Button variant="link" type="button">
-              Link
-            </Button>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <Button variant="link" className="btn-text" type="button">
-              Text
-            </Button>
-          </Col>
-        </Row>
+        <div class="row">
+          <div class="col">
+            <Form.Group className="form-group--floating" controlId="exampleForm.ControlTextarea1">
+              <Form.Control as="textarea" rows="3" placeholder=" " />
+              <Form.Label>
+                <span>Floating text</span>
+              </Form.Label>
+              <Form.Text id="passwordHelpBlock" muted>
+                Your password must be 8-20 characters long, contain letters and
+                numbers, and must not contain spaces, special characters, or emoji.
+              </Form.Text>
+            </Form.Group>
+          </div>
+        </div>
+        
 
-        <hr />
+        {/* ------------------------------------------------------------------- */}
 
-        <Row>
-          <Col>
-            <Button variant="outline-primary">Outline</Button>
-          </Col>
-        </Row>
+      <div className="my-5 py-5">
+        <h1>Buttons</h1>
+        <hr/>
+          <Row>
+            <Col>
+              <Button variant="primary" type="button">
+                Default
+              </Button>
+            </Col>
+            <Col>
+              <Button size="sm" variant="primary" type="button">
+                Small
+              </Button>
+            </Col>
+            <Col>
+              <Button size="md" variant="primary" type="button">
+                Medium
+              </Button>
+            </Col>
+            <Col>
+              <Button variant="primary" type="button">
+                <PersonIcon size="18" />
+                Icon
+              </Button>
+            </Col>            
+          </Row>
+          <Row className="py-5">
+            <Col>
+              <Button variant="link" className="btn-text" type="button">
+                Text
+              </Button>
+            </Col>
+            <Col>
+              <Button variant="outline-primary">Outline</Button>
+            </Col>
+            <Col>
+              <Button variant="link" type="button">
+                Link
+              </Button>
+            </Col>
+          </Row>
 
-        <h4 className="my-5">Checkbox / Radio</h4>
+        </div>
 
-        <Form.Check custom label="Custome" type={"checkbox"} id="chk-1" />
-        <Form.Check custom label="Checkbox" type={"checkbox"} id="chk-2" />
+        <div className="my-5 py-5">
+          <h1>Checkbox & Radio buttons</h1>
+          <hr/>
+          
+          <Form.Check custom label="Custome" type={"checkbox"} id="chk-1" />
+          <Form.Check custom inline label="Checkbox" type={"checkbox"} id="chk-2" />
+          <Form.Check custom inline label="Checkbox" type={"checkbox"} id="chk-24" />
 
-        <br />
+          <Form.Check custom label="Custom" type={"radio"} id="rd-1" />
+          <Form.Check
+            custom
+            inline
+            label="Custome"
+            name="r1"
+            type={"radio"}
+            id="rd-3"
+          />
+          <Form.Check
+            custom
+            inline
+            label="Radio"
+            name="r1"
+            type={"radio"}
+            id="rd-2"
+          />
+          <Form.Check
+            custom
+            inline
+            label="Radio"
+            name="r1"
+            type={"radio"}
+            id="rd-5"
+          />
+      </div>
 
-        <Form.Check custom inline label="Custom" type={"radio"} id="rd-1" />
-        <Form.Check
-          custom
-          inline
-          label="Custome"
-          name="r1"
-          type={"radio"}
-          id="rd-3"
-        />
-        <Form.Check
-          custom
-          inline
-          label="Radio"
-          name="r1"
-          type={"radio"}
-          id="rd-2"
-        />
-        <Form.Check
-          custom
-          inline
-          label="Radio"
-          name="r1"
-          type={"radio"}
-          id="rd-5"
-        />
-      </Form>
+    </div>
 
       <h4 className="my-5">Choice tags / Radio box</h4>
 
@@ -163,6 +240,24 @@ const Forms = () => {
         name="ct1"
         type={"radio"}
         id="ct-2"
+      />
+
+      <Form.Check
+        className="choice-tag choice-tag-check"
+        custom
+        label="Choice Tag"
+        name="ct52"
+        type={"radio"}
+        id="ct-52"
+      />
+
+      <Form.Check
+        className="choice-tag choice-tag-check"
+        custom
+        label="Choice Tag"
+        name="ct52"
+        type={"radio"}
+        id="ct-58"
       />
 
       <div className="choice-tag choice-tag--icon custom-control custom-radio">

@@ -1047,6 +1047,7 @@
 // ======================= Dropdown =======================
 .rc-picker-dropdown {
   position: absolute;  
+  z-index: 1;
 }
 
 .rc-picker-dropdown-range {
@@ -1150,4 +1151,253 @@
   display: inline-block;
   vertical-align: top;
   transition: margin 0.3s;
+}
+
+/**
+ * Table
+ */
+ .rc-table {
+  box-sizing: border-box;
+  position: relative;
+}
+
+.rc-table-rtl {
+  direction: rtl;
+}
+
+.rc-table {
+  table {
+    border-spacing: 0px;
+    width: 100%;
+  }
+
+  th, td {
+    position: relative;
+    box-sizing: border-box;
+    white-space: normal;
+    word-break: break-word;
+  }
+}
+
+.rc-table-rtl.rc-table {
+  th, td {
+  }
+}
+
+.rc-table-cell-fix-left {
+  z-index: 1;
+}
+
+.rc-table-cell-fix-right {
+  z-index: 1;
+
+  &:last-child {
+  }
+}
+
+.rc-table-rtl {
+  .rc-table-cell-fix-right:last-child {
+  }
+
+  .rc-table-cell-fix-left:last-child {
+  }
+
+  .rc-table-cell-fix-left-first {
+  }
+}
+
+.rc-table-cell-fix-left-first::after, .rc-table-cell-fix-left-last::after {
+  pointer-events: none;
+  content: '';
+  transition: box-shadow 0.3s;
+  position: absolute;
+  top: 0;
+  bottom: -1px;
+  width: 20px;
+  right: -1px;
+  transform: translateX(100%);
+}
+
+.rc-table-cell-fix-right-first, .rc-table-cell-fix-right-last {
+}
+
+.rc-table-rtl {
+  .rc-table-cell-fix-right-first, .rc-table-cell-fix-right-last {
+    
+  }
+}
+
+.rc-table-cell-fix-right-first::after, .rc-table-cell-fix-right-last::after {
+  pointer-events: none;
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: -1px;
+  width: 20px;
+  left: -1px;
+  transform: translateX(-100%);
+}
+
+.rc-table-cell.rc-table-cell-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  &.rc-table-cell-fix-left-first, &.rc-table-cell-fix-left-last, &.rc-table-cell-fix-right-first .rc-table-cell.rc-table-cell-ellipsis.rc-table-cell-fix-right-last {
+    overflow: visible;
+  }
+
+  &.rc-table-cell-fix-left-first .rc-table-cell-content, &.rc-table-cell-fix-left-last .rc-table-cell-content, &.rc-table-cell-fix-right-first .rc-table-cell.rc-table-cell-ellipsis.rc-table-cell-fix-right-last .rc-table-cell-content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+  }
+}
+
+.rc-table-ping-left {
+  .rc-table-cell-fix-left-first::after, .rc-table-cell-fix-left-last::after {
+    
+  }
+}
+
+.rc-table-ping-right {
+  .rc-table-cell-fix-right-first::after, .rc-table-cell-fix-right-last::after {
+    
+  }
+}
+
+.rc-table-expand-icon-col {
+  width: 60px;
+}
+
+.rc-table-row-expand-icon-cell {
+}
+
+.rc-table thead {
+  td, th {
+  }
+
+  .rc-table-cell-scrollbar::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: -1px;
+    width: 1px;
+  }
+}
+
+.rc-table-rtl.rc-table thead .rc-table-cell-scrollbar::after {
+  right: -1px;
+  left: auto;
+}
+
+.rc-table-header {
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.rc-table-placeholder {
+  text-align: center;
+}
+
+.rc-table tbody tr {
+  td, th {
+  }
+}
+
+.rc-table-content {
+}
+
+.rc-table-body {
+}
+
+.rc-table-fixed-column .rc-table-body::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.rc-table-expanded-row > .rc-table-cell {
+  padding: 0;
+  padding-left: 60px;
+  background-color: hsla(
+    var(--color-contrast-lower-h),
+    var(--color-contrast-lower-s),
+    var(--color-contrast-lower-l),
+    0.54
+  );
+  
+  .rc-table {
+    margin: 0;
+  }
+}
+
+.rc-table-expanded-row-fixed {
+  box-sizing: border-box;
+  margin: -16px -8px;
+  padding: 16px 8px;
+  margin-right: -10px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    top: 0;
+    bottom: 0;
+    right: 1px;
+  }
+}
+
+.rc-table-row-expand-icon {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  border: 1px solid var(--color-contrast-high);
+  color: var(--color-contrast-high);
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  line-height: 18px;
+  transition: all .2 ease;
+  
+  &:hover {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+    box-shadow: 0px 0px 0px 2px
+      hsla(
+        var(--color-primary-h),
+        var(--color-primary-s),
+        var(--color-primary-l),
+        0.25
+      ) !important;
+      
+  } 
+
+  &.rc-table-row-expanded::after {
+    content: '-';
+  }
+
+  &.rc-table-row-collapsed::after {
+    content: '+';
+  }
+
+  &.rc-table-row-spaced {
+    visibility: hidden;
+  }
+}
+
+.rc-table-title {
+  border-bottom: 0;
+}
+
+.rc-table-footer {
+  border-top: 0;
+}
+
+.rc-table tfoot td {
 }

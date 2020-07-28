@@ -5,6 +5,7 @@ import AccordionCard from "./components/AccordionCard";
 import Tabular from "./components/Tabular";
 import Cards from './components/Cards';
 import DatePickers from './components/DatePickers'
+import Tables from './components/Tables';
 
 
 
@@ -14,6 +15,7 @@ function App() {
       <Forms />
       <Tabular />
       <DatePickers />
+      <Tables />
       <AccordionCard />
       <Cards />
       <Dialogs />
