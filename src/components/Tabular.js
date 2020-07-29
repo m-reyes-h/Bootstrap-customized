@@ -1,19 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { Row, Col } from "react-bootstrap";
 import Tabs, { TabPane } from 'rc-tabs';
 import { BsCollection as CollectionIcon, BsPersonPlusFill as PersonIcon } from "react-icons/bs";
 
-const First = () => {
-  return (
-    <>
-      <CollectionIcon size="20" className="mr-2" /> Hello
-    </>
-  );
-};
 
 function Tabular() {
-  const [key, setKey] = useState("home");
-
   return (
     <div className="my-5 bg-white border p-5">
       <div className="mv-5 py-5">

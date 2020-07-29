@@ -15,10 +15,10 @@ function App() {
       <Forms />
       <Tables />
       <Tabular />
+      <Dialogs />
       <DatePickers />
       <AccordionCard />
       <Cards />
-      <Dialogs />
     </div>
   )
 }
