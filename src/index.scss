@@ -370,13 +370,36 @@ label {
       align-items: center;
       justify-content: center;
       right: 32px;
-      top: 0;
+      top: -3px;
       bottom: 0;
       cursor: pointer;
 
+      &:before {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background-color: var(--body-color);
+        top: 50%;
+        transform: translate(-50%, calc(-50% + 2px)) scale(0);
+        left: 50%;
+        z-index: 0;
+        transition: transform 0.3s ease;
+      }
+
+      &:hover {
+        &:before {
+          transform: translate(-50%, calc(-50% + 2px)) scale(1);
+        }
+      }
+
       .rc-select-clear-icon {
-        font-size: 22px;
+        font-size: 23px;
         color: var(--subtitle1-color);
+        font-weight: 300;
+        z-index: 1;
       }
     }
 
@@ -405,7 +428,7 @@ label {
             width: 24px;
             height: 12px;
             position: relative;
-            top: 0;
+            top: -2px;
             bottom: 0;
             display: inline-block;
             transition: all 0.3s ease-in-out;
