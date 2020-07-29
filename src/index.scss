@@ -603,6 +603,33 @@ label {
     box-shadow: none;
   }
 
+  /* Secondary */
+  &.btn-secondary,
+  &.btn-outline-secondary {
+    border-color: var(--input-border-color);
+    background-color: var(--white) !important;
+
+    &:hover {
+      background-color: var(--light-blue);
+      border-color: var(--blue);
+      box-shadow: none;
+    }
+
+    &:active {
+      background-color: var(--light-blue) !important;
+      border-color: var(--blue) !important;
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px,
+        rgba(0, 0, 0, 0.14) 0px 4px 5px 0px,
+        rgba(0, 0, 0, 0.12) 0px 1px 10px 0px !important;
+    }
+
+    &:focus {
+      background-color: var(--light-blue) !important;
+      border-color: var(--blue);
+      box-shadow: none !important;
+    }
+  }
+
   /* Primary */
   &.btn-primary,
   &.btn-outline-primary {
@@ -625,7 +652,7 @@ label {
       border-color: rgba(26, 115, 232, 0.9);
       box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px,
         rgba(0, 0, 0, 0.14) 0px 4px 5px 0px,
-        rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
+        rgba(0, 0, 0, 0.12) 0px 1px 10px 0px !important;
     }
   }
 
@@ -1076,9 +1103,9 @@ label {
  * Dropdown
  */
 .dropdown-menu {
-  border: 1px solid var(--input-border-color);
+  border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
-  box-shadow: var(--shadow-md);
+  //box-shadow: var(--shadow-md);
   background: var(--white);
   transition: visibility 0s, opacity 0.2s;
   padding: 0.5em 0;
@@ -1087,21 +1114,21 @@ label {
     cursor: pointer;
     user-select: none;
     padding: 0.5em 0.75em;
+    color: var(--subtitle1-color);
+    font-weight: 400;
 
     &:hover {
       background-color: var(--body-color);
+      text-decoration: none;
+      font-weight: 400;
+      color: var(--text-color);
     }
 
     &:active,
     &:focus {
       outline: none;
-      background-color: hsla(
-        var(--color-contrast-medium-h),
-        var(--color-contrast-medium-s),
-        var(--color-contrast-medium-l),
-        0.2
-      );
-      color: var(--color-contrast-high);
+      background-color: var(--light-blue);
+      color: var(--blue);
     }
   }
 }

@@ -189,6 +189,9 @@ const Forms = () => {
                 Link
               </Button>
             </Col>
+            <Col>
+              <Button variant="outline-secondary blue">Outline</Button>
+            </Col>
           </Row>
         </div>
 
@@ -559,24 +562,89 @@ const Forms = () => {
               </Col>
             </Row>
           </div>
+
+          {/* ------------------------------------------------------------------- */}
+
+          <div className="my-5 py-5">
+            <h1>Dropdown</h1>
+            <hr />
+
+            <Row>
+              <Col>
+                <Dropdown>
+                  <Dropdown.Toggle variant="primary" id="dropdown-basic">
+                    Dropdown Button
+                  </Dropdown.Toggle>
+
+                  <Dropdown.Menu>
+                    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                    <Dropdown.Item href="#/action-2">
+                      Another action
+                    </Dropdown.Item>
+                    <Dropdown.Item href="#/action-3">
+                      Something else
+                    </Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
+              </Col>
+              <Col>
+                <Dropdown>
+                  <Dropdown.Toggle
+                    variant="outline-secondary text-color"
+                    id="dropdown-basic"
+                  >
+                    Dropdown Button
+                  </Dropdown.Toggle>
+
+                  <Dropdown.Menu>
+                    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                    <Dropdown.Item href="#/action-2">
+                      Another action
+                    </Dropdown.Item>
+                    <Dropdown.Item href="#/action-3">
+                      Something else
+                    </Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
+              </Col>
+            </Row>
+          </div>
+
+          {/* ------------------------------------------------------------------- */}
+
+          <div className="my-5 py-5">
+            <h1>List group</h1>
+            <hr />
+
+            <ul className="list-group list-group--options">
+              <li className="list-group-item">
+                <Form.Check
+                  className="medium"
+                  custom
+                  label="Medium size"
+                  name="asd"
+                  type={"radio"}
+                  id="rd-333"
+                />
+              </li>
+              <li className="list-group-item">
+                <Form.Check
+                  custom
+                  label="Custome"
+                  name="asd"
+                  type={"radio"}
+                  id="rd-3333"
+                />
+              </li>
+              <li className="list-group-item">Morbi leo risus</li>
+              <li className="list-group-item">Porta ac consectetur ac</li>
+              <li className="list-group-item">Vestibulum at eros</li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <div className="row">
-        <div className="col">
-          <Dropdown>
-            <Dropdown.Toggle variant="primary" id="dropdown-basic">
-              Dropdown Button
-            </Dropdown.Toggle>
 
-            <Dropdown.Menu>
-              <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-              <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-              <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
-        </div>
-      </div>
       <div className="row">
         <div className="col">
           <ul className="list-group list-group--options">
