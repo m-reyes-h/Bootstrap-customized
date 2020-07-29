@@ -59,6 +59,23 @@ const Forms = () => {
           </div>
           <div class="col rounded p-4 bg-white border">Border color</div>
         </div>
+        <div class="row mt-3">
+          <div class="col rounded p-4 bg-subtitle text-light">
+            background subtitle
+          </div>
+          <div class="col rounded p-4 bg-subtitle1 text-light ml-1">
+            background subtitle 1
+          </div>
+          <div class="col rounded p-4 bg-subtitle2 text-light ml-1">
+            background subtitle 2
+          </div>
+          <div class="col rounded p-4 bg-border ml-1">
+            background border
+          </div>
+          <div class="col rounded p-4 bg-description text-light ml-1">
+            description
+          </div>
+        </div>
       </div>
 
       {/* ------------------------------------------------------------------- */}
@@ -629,7 +646,7 @@ const Forms = () => {
 
           {/* ------------------------------------------------------------------- */}
 
-          <div className="my-5 py-5">
+          <div className="mt-5 pt-5">
             <h1>List group</h1>
             <hr />
             

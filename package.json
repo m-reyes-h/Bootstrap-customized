@@ -13,6 +13,7 @@
     "rc-picker": "^1.8.0",
     "rc-select": "^11.0.0",
     "rc-table": "^7.8.0",
+    "rc-tabs": "^11.5.6",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
