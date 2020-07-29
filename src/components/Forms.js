@@ -589,6 +589,23 @@ const Forms = () => {
               </Col>
               <Col>
                 <Dropdown>
+                  <Dropdown.Toggle variant="outline-primary" id="dropdown-basic">
+                    Dropdown Button
+                  </Dropdown.Toggle>
+
+                  <Dropdown.Menu>
+                    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                    <Dropdown.Item href="#/action-2">
+                      Another action
+                    </Dropdown.Item>
+                    <Dropdown.Item href="#/action-3">
+                      Something else
+                    </Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
+              </Col>
+              <Col>
+                <Dropdown>
                   <Dropdown.Toggle
                     variant="outline-secondary text-color"
                     id="dropdown-basic"
@@ -615,64 +632,58 @@ const Forms = () => {
           <div className="my-5 py-5">
             <h1>List group</h1>
             <hr />
-
-            <ul className="list-group list-group--options">
-              <li className="list-group-item">
-                <Form.Check
-                  className="medium"
-                  custom
-                  label="Medium size"
-                  name="asd"
-                  type={"radio"}
-                  id="rd-333"
-                />
-              </li>
-              <li className="list-group-item">
-                <Form.Check
-                  custom
-                  label="Custome"
-                  name="asd"
-                  type={"radio"}
-                  id="rd-3333"
-                />
-              </li>
-              <li className="list-group-item">Morbi leo risus</li>
-              <li className="list-group-item">Porta ac consectetur ac</li>
-              <li className="list-group-item">Vestibulum at eros</li>
-            </ul>
+            
+            <Row>
+              <Col>
+                <p className="subtitle2">Selectable list</p>
+                <ul className="list-group list-group--options border rounded p-3">
+                  <li className="list-group-item">
+                    <Form.Check
+                      className="medium"
+                      custom
+                      label="English (Ingles)"
+                      name="asd"
+                      type={"radio"}
+                      id="rd-333"
+                    />
+                  </li>
+                  <li className="list-group-item">
+                    <Form.Check
+                      custom
+                      label="Spanish (Español)"
+                      name="asd"
+                      type={"radio"}
+                      id="rd-3333"
+                    />
+                  </li>
+                  <li className="list-group-item">
+                    <Form.Check
+                      custom
+                      label="French (Frances)"
+                      name="asd"
+                      type={"radio"}
+                      id="rd-33323"
+                    />
+                  </li>
+                </ul>
+              </Col>
+              <Col>
+              <p className="subtitle2">Common list</p>
+                <ul className="list-group list-group--options">
+                  <li className="list-group-item">Morbi leo risus</li>
+                  <li className="list-group-item">Morbi leo risus</li>
+                  <li className="list-group-item">Porta ac consectetur ac</li>
+                  <li className="list-group-item">Vestibulum at eros</li>
+                  <li className="list-group-item">Porta ac consectetur ac</li>
+                  <li className="list-group-item">Vestibulum at eros</li>
+                </ul>
+              </Col>
+            </Row>
+            
           </div>
         </div>
       </div>
 
-
-      <div className="row">
-        <div className="col">
-          <ul className="list-group list-group--options">
-            <li className="list-group-item">
-              <Form.Check
-                className="medium"
-                custom
-                label="Medium size"
-                name="asd"
-                type={"radio"}
-                id="rd-333"
-              />
-            </li>
-            <li className="list-group-item">
-              <Form.Check
-                custom
-                label="Custome"
-                name="asd"
-                type={"radio"}
-                id="rd-3333"
-              />
-            </li>
-            <li className="list-group-item">Morbi leo risus</li>
-            <li className="list-group-item">Porta ac consectetur ac</li>
-            <li className="list-group-item">Vestibulum at eros</li>
-          </ul>
-        </div>
-      </div>
     </div>
   );
 };

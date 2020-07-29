@@ -13,9 +13,9 @@ function App() {
   return (
     <div className="container mt-5">
       <Forms />
+      <Tables />
       <Tabular />
       <DatePickers />
-      <Tables />
       <AccordionCard />
       <Cards />
       <Dialogs />
