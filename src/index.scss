@@ -1153,7 +1153,6 @@ label {
 .dropdown-menu {
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
-  //box-shadow: var(--shadow-md);
   background: var(--white);
   transition: visibility 0s, opacity 0.2s;
   padding: 0.5em 0;
@@ -1179,6 +1178,14 @@ label {
       color: var(--blue);
     }
   }
+}
+
+.dropdown-toggle::after {
+  margin-left: 8px;
+  border-top: 0.35em solid;
+  border-right: 0.35em solid transparent;
+  border-bottom: 0;
+  border-left: 0.35em solid transparent;
 }
 
 /**
