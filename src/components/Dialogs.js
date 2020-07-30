@@ -11,14 +11,25 @@ const Footer = () => (
 
 const Dialogs = () => {
   const [visible, setVisible] = React.useState(false)
+  const [visible1, setVisible1] = React.useState(false);
 
   const handleOpen = () => {
     setVisible(true)
     document.body.classList.add("scrolling-effect")
   }
 
+  const handleOpen1 = () => {
+    setVisible1(true)
+    document.body.classList.add("scrolling-effect")
+  }
+
   const handleClose = () => {
     setVisible(false)
+    document.body.classList.remove("scrolling-effect")
+  }
+
+  const handleClose1 = () => {
+    setVisible1(false)
     document.body.classList.remove("scrolling-effect")
   }
 
@@ -34,6 +45,20 @@ const Dialogs = () => {
             <Button variant="primary" type="button" onClick={handleOpen}>
               Show dialog
             </Button>
+
+            
+            <Button variant="primary" type="button" onClick={handleOpen1}>
+              Center / Small / Animated
+            </Button>
+            <Dialog
+              title="You are order has been create!"
+              onClose={handleClose1}
+              visible={visible1}
+              wrapClassName="center"
+              animation="zoom"
+            >
+              <p>Your order number is: <strong>7854221A14</strong></p>
+            </Dialog>
             <Dialog
               title="Use Google's location service?"
               onClose={handleClose}
