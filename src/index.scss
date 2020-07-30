@@ -79,26 +79,26 @@ body {
 }
 
 .subtitle {
-  font-size: 18px;
+  font-size: 18px !important;
   color: var(--subtitle-color);
-  line-height: 24px;
+  line-height: 24px !important;
   font-weight: 400;
 }
 
 .subtitle1 {
-  font-size: 16px;
+  font-size: 16px !important;
   color: var(--subtitle1-color);
-  line-height: 24px;
+  line-height: 24px !important;
   font-weight: 500;
 }
 
 .subtitle2 {
   font-weight: 500;
-  font-size: 11px;
-  line-height: 16px;
+  font-size: 11px !important;
+  line-height: 16px !important;
   color: var(--subtitle2-color);
-  letter-spacing: 0.8px;
-  text-transform: uppercase;
+  letter-spacing: 0.8px !important;
+  text-transform: uppercase !important;
 }
 
 .body,
@@ -108,23 +108,23 @@ th,
 .rc-tabs-tab {
   font-weight: 400;
   color: var(--text-color);
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
 }
 
 .description,
 td {
-  font-size: 14px;
+  font-size: 14px !important;
   color: var(--description-color);
-  letter-spacing: 0.2px;
+  letter-spacing: 0.2px !important;
 }
 
 .help,
 .text-muted {
-  font-size: 12px;
+  font-size: 12px !important;
   font-weight: 400;
-  letter-spacing: 0.3px;
-  line-height: 16px;
+  letter-spacing: 0.3px !important;
+  line-height: 16px !important;
 }
 
 a,
@@ -311,6 +311,26 @@ label {
 
 .form-group {
   position: relative;
+
+  &.input-sufix {
+    .form-control {
+      padding-right: 42px;
+
+      &:hover,
+      &:focus {
+        & + svg {
+          fill: var(--input-border-color-focus);
+        }
+      }
+    }
+
+    svg {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      fill: var(--input-border-color);
+    }
+  }
 
   &.form-group--floating {
     .form-control {
@@ -1266,33 +1286,28 @@ label {
  */
 .card {
   box-shadow: 0;
-  background-color: var(--color-bg);
-  border-radius: var(--radius-md);
+  background-color: var(--white);
+  border-radius: var(--radius-lg);
   transition: all 0.3s ease;
-  border: 1px solid
-    hsla(
-      var(--color-contrast-low-h),
-      var(--color-contrast-low-s),
-      var(--color-contrast-low-l),
-      0.5
-    );
+  border: 1px solid var(--border-color);
 
   &:hover {
-    box-shadow: var(--shadow-sm);
+    border-color: var(--input-border-color);
   }
 
   .card-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: var(--space-sm);
-    padding-bottom: var(--space-sm);
+    padding-top: 1.25em;
+    padding-bottom: 0.75em;
     padding-left: 1.25em !important;
     padding-right: 1.25em !important;
-    background-color: var(--color-bg) !important;
-    border-color: transparent;
-    color: var(--color-black);
-    max-height: 55px;
+    background-color: var(--white) !important;
+    border-color: transparent !important;
+    color: var(--text-color);
+    height: auto !important;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0 !important;
 
     /* As button header for keyboard navigation */
     &.card-header--toggle {
@@ -1301,59 +1316,46 @@ label {
 
       &:focus,
       &:active {
-        background-color: var(--color-bg);
-        color: var(--color-black);
+        background-color: var(--light-blue) !important;
+        color: var(--text-color);
         border-color: transparent;
         transform: translateY(0);
       }
 
       &:focus {
-        background-color: hsla(
-          var(--color-contrast-lower-h),
-          var(--color-contrast-lower-s),
-          var(--color-contrast-lower-l),
-          0.7
-        ) !important;
+        background-color: var(--body-color);
       }
     }
 
     .btn:not(.card-header--toggle) {
-      padding-left: var(--space-xs);
-      padding-right: var(--space-xs);
-      font-weight: 500;
-      font-size: 0.77rem;
-      letter-spacing: 0.02857em;
-      text-transform: uppercase;
+      padding-left: 0.5em;
+      padding-right: 0.5em;
 
       svg {
-        margin-left: var(--space-xs);
+        margin-left: 0.5em;
       }
     }
   }
 
   .card-footer {
-    background-color: var(--color-bg);
+    background-color: var(--white);
     border-color: transparent;
     display: flex;
     align-items: center;
-    padding-top: var(--space-xxs);
+    padding-top: 0.5em;
 
     &:last-child {
-      border-radius: var(--radius-md);
+      border-radius: var(--radius-lg);
     }
   }
 
   .card-body {
-    background-color: var(--color-bg);
+    background-color: var(--white);
   }
 
   .card-title,
   .card-header--toggle {
     margin-bottom: 0;
-    font-weight: 400;
-    font-size: 1.05rem;
-    line-height: 1.5;
-    letter-spacing: 0.00938em;
   }
 }
 

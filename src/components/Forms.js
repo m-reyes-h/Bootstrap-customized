@@ -1,6 +1,7 @@
 import React from "react";
 import { Form, Button, Row, Col, FormCheck, Dropdown } from "react-bootstrap";
 import { BsPersonPlusFill as PersonIcon } from "react-icons/bs";
+import {RiSearchLine as SearchIcon} from 'react-icons/ri';
 import Select, { Option } from "rc-select";
 
 const Forms = () => {
@@ -99,6 +100,16 @@ const Forms = () => {
               <Form.Control.Feedback className="help" type="invalid">
                 Invalid field data
               </Form.Control.Feedback>
+            </Form.Group>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <Form.Group controlId="formBasicEmail1" className="input-sufix">
+              <Form.Label>Default text</Form.Label>
+              <Form.Control type="text" placeholder=" " />
+              <><SearchIcon size="18"/></>
             </Form.Group>
           </div>
         </div>
