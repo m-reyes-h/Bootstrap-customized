@@ -8,7 +8,7 @@
     "@testing-library/user-event": "^7.2.1",
     "bootstrap": "^4.5.0",
     "moment": "^2.27.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "rc-dialog": "^8.0.1",
     "rc-picker": "^1.8.0",
     "rc-select": "^11.0.0",
